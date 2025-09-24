@@ -55,25 +55,19 @@ git clone https://github.com/VishwanathanA/Inventory-Management-System.git
 cd inventory-management-system
 ```
 
-### Step 2: Create Virtual Environment
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-### Step 3: Install Dependencies
+### Step 2: Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 4: Database Setup
+### Step 3: Database Setup
 1. Create a MySQL database named `inventory_db`
 2. Update the database connection string in `app.py` if needed:
 ```python
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@localhost/inventory_db'
 ```
 
-### Step 5: Run the Application
+### Step 4: Run the Application
 ```bash
 python app.py
 ```
