@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from modules import db, Product, Location, ProductMovement
-from sqlalchemy import func
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root123@localhost/inventory_db'
+
+# Use your online Filess.io database
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://Inventory_solidtrack:866f3c71dd935f9863eb9f2814996f90c5c13c4c@lq6mtr.h.filess.io:61002/Inventory_solidtrack'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = "dev-key"
+
+# Initialize the database with Flask app
 db.init_app(app)
 
 # Home page
