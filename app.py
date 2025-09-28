@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from modules import db, Product, Location, ProductMovement
+from sqlalchemy import func
 
 app = Flask(__name__)
 
